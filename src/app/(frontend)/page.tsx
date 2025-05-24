@@ -85,7 +85,7 @@ async function Home() {
                         height="130"
                         width="250"
                         className="object-cover h-full w-full scale-125 group-hover:scale-100 transition-all duration-300"
-                        src={category.image.url}
+                        src={`/media/${category.image.filename}`}
                         alt={category.title}
                       />
                     </span>
@@ -205,7 +205,7 @@ async function Home() {
                     </span>
                     <Image
                       className="rounded-xl md:rounded-2xl h-[360px] w-full object-cover bg-white/10"
-                      src={lastPost.thumbnail.url}
+                      src={`/media/${lastPost.thumbnail.filename}`}
                       width={lastPost.thumbnail.width}
                       height={lastPost.thumbnail.height}
                       alt={lastPost.title}

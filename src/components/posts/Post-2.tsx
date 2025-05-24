@@ -64,9 +64,9 @@ const PostTwo = ({ post }: Props) => {
         </span>
         <Image
           className="rounded-xl md:rounded-2xl w-full max-h-96 aspect-[9/12] object-cover bg-white/40"
-          src={post.thumbnail?.url}
-          height={post.thumbnail?.height}
-          width={post.thumbnail?.width}
+          src={`/media/${post.thumbnail.filename}`}
+          height={post.thumbnail.height}
+          width={post.thumbnail.width}
           alt={post.title}
         />
       </div>

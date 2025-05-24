@@ -115,7 +115,7 @@ async function Search({ searchParams }: Props) {
                   <div className="flex gap-3">
                     <div className="relative shrink-0">
                       <Image
-                        src={post.thumbnail.url}
+                        src={`/media/${post.thumbnail.filename}`}
                         alt={post.thumbnail.alt}
                         width={post.thumbnail.width}
                         height={post.thumbnail.height}
@@ -150,7 +150,7 @@ async function Search({ searchParams }: Props) {
                   <div className="flex gap-3">
                     <div className="relative shrink-0">
                       <Image
-                        src={post.thumbnail.url}
+                        src={`/media/${post.thumbnail.filename}`}
                         alt={post.thumbnail.alt}
                         width={post.thumbnail.width}
                         height={post.thumbnail.height}

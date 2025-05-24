@@ -1,4 +1,5 @@
 import payloadConfig from "@/payload.config";
+import { Category } from "@/types/category";
 import Image from "next/image";
 import Link from "next/link";
 import { getPayload } from "payload";
@@ -13,9 +14,10 @@ const AllCategory = async () => {
     config: payloadConfig,
   });
 
-  const { docs: categories } = await payload.find({
+  const { docs } = await payload.find({
     collection: "categories",
   });
+  const categories = docs as unknown as Category[];
 
   return (
     <>
@@ -47,7 +49,7 @@ const AllCategory = async () => {
                 >
                   <div className="relative overflow-clip rounded-md">
                     <Image
-                      src={category.image.url}
+                      src={`/media/${category.image.filename}`}
                       alt={category.image.alt}
                       height={category.image.height}
                       width={category.image.width}

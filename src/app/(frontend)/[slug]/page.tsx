@@ -130,11 +130,11 @@ const BlogDetails = async (props: Props) => {
             <div className="lg:col-8">
               <div className="relative w-full h-[380px] lg:h-[460px]">
                 <Image
-                  className="rounded-xl object-cover bg-dark/10"
                   fill
-                  src={thumbnail.url}
-                  alt={thumbnail.alt}
+                  className="rounded-xl object-cover bg-dark/10"
                   sizes="(max-width: 768px) 400px, (max-width: 1200px) 500px, 700px"
+                  src={`/media/${thumbnail.filename}`}
+                  alt={thumbnail.alt}
                 />
 
                 {/* prettier-ignore */}
@@ -223,6 +223,7 @@ const BlogDetails = async (props: Props) => {
             buttonLabel="All Posts"
             buttonLink="/blog"
           />
+
           <div className="container mt-12">
             <div className="row gy-6">
               {relatedPosts.map((post, key) => (

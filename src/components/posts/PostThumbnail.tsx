@@ -23,7 +23,7 @@ function PostThumbnail({ post, text }: Props) {
         <Link
           ref={categoryRef}
           href={`/category/${post.category.slug}`}
-          className={`transition duration-300    ${
+          className={`transition duration-300 ${
             text === "light"
               ? "border-white/30 hover:bg-white hover:text-dark"
               : "border-dark hover:bg-dark hover:text-white"
@@ -42,7 +42,7 @@ function PostThumbnail({ post, text }: Props) {
           const catWidth = categoryRef.current?.offsetWidth;
           if (catWidth) el.style.setProperty("--catWidth", `${catWidth}px`);
         }}
-        src={post.thumbnail.url}
+        src={`/media/${post.thumbnail.filename}`}
         height={post.thumbnail.width}
         width={post.thumbnail.height}
         alt={post.title}
