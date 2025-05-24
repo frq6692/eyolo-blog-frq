@@ -1,9 +1,7 @@
 import { withPayload } from "@payloadcms/next/withPayload";
 
-const nextConfig = {
-  experimental: {
-    reactCompiler: false,
-  },
-};
+const nextConfig = {};
 
-export default withPayload(nextConfig);
+export default withPayload(nextConfig, {
+  devBundleServerPackages: false,
+});
